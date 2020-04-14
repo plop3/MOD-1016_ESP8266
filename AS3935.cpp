@@ -41,7 +41,7 @@ volatile bool displayingFrequency;
 volatile sgn32 pulse = 0;
 sgn32 cap_frequencies[16];
 
-void pulseDetected() {
+ICACHE_RAM_ATTR void pulseDetected() {
 	if (displayingFrequency)
 		pulse++;
 }

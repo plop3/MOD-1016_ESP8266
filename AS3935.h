@@ -77,7 +77,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 /*Automatically sets TUNE_CAPS to the best possible setting, ie the one that producs a frequency closest to 500kHz*/
 void autoTuneCaps(uns8 irq);
 /*ISR for measuring the frequency output on the IRQ pin*/
-void pulseDetected();
+ICACHE_RAM_ATTR void pulseDetected();
 /*Generate the frequency output on IRQ pin and measure number of pulses in 200ms. Returns number of pulses * 5*/
 sgn32 getFrequency(uns8 irq);
 /*Measure frequency output under setting 0-15 on TUNE_CAPS*/
